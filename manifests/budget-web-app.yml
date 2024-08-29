@@ -31,10 +31,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: budget-app-web-service
+  name: budget-web-app-service
 spec:
   selector:
-    app: budget-app-web
+    app: budget-web-app
   ports:
     - protocol: TCP
       port: 80 
@@ -44,7 +44,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: budget-app-web-ingress
+  name: budget-web-app-ingress
 spec: 
   rules:
   - host: 65.2.40.247   # replace with your actual hostname
@@ -54,6 +54,6 @@ spec:
        path: "/"
        backend:
          service: 
-           name: budget-app-web-service
+           name: budget-web-app-service
            port:
              number: 80  
