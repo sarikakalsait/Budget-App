@@ -8,7 +8,7 @@ spec:
     matchLabels:
       app: budget-web-app
   template:
-    metadate:
+    metadata:
       labels:
         app: budget-web-app
     spec:
