@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: budget-web-app
+  name: budget-web-application
 spec:
   replicas: 1
   selector:
@@ -13,7 +13,7 @@ spec:
         app: budget-web-app
     spec:
       containers:
-        - name: budget-web-app
+        - name: budget-web-app1
           image: poojamane12/budget-app:latest
           ports:
             - containerPort: 3000
