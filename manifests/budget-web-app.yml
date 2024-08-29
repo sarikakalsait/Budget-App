@@ -47,7 +47,7 @@ metadata:
   name: budget-web-app-ingress
 spec: 
   rules:
-  - host: 65.2.40.247   # replace with your actual hostname
+  - host: ec2-65-2-40-247.ap-south-1.compute.amazonaws.com  # replace with your actual hostname
     http:
      paths:
      - pathType: Prefix
