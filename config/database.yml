@@ -23,7 +23,11 @@ default: &default
 
 development:
   <<: *default
-  database: Budgy_development
+  database: budgy_development
+  host: <%= ENV.fetch("DB_HOST") { "db" } %>
+  username: <%= ENV.fetch("DB_USERNAME") { "Budgy" } %>
+  password: <%= ENV.fetch("DB_PASSWORD") { "Budgy" } %>
+  port: <%= ENV.fetch("DB_PORT") { 5432 } %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +61,11 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: Budgy_test
+  database: budgy_test
+  host: <%= ENV.fetch("DB_HOST") { "db" } %>
+  username: <%= ENV.fetch("DB_USERNAME") { "Budgy" } %>
+  password: <%= ENV.fetch("DB_PASSWORD") { "Budgy" } %>
+  port: <%= ENV.fetch("DB_PORT") { 5432 } %>
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
